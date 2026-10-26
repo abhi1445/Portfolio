@@ -74,21 +74,20 @@ function App() {
 
           <div className="hero-visual reveal">
             <div className="glow"></div>
+            <div className="photo-frame"><div>
+              <img src="/photo.jpg" alt="Portrait of Abhishek Patil" />
+              <span className="scan"></span>
+              <span className="hud tl">ID // AP-2027 · ONLINE</span>
+              <span className="hud bl"><b>{portfolio.name}</b>MCA · Kolhapur, IN</span>
+            </div></div>
             <div className="code-card">
               <div className="window-bar"><i></i><i></i><i></i><span>developer.js</span></div>
-              <pre><code>{`const developer = {
-  name: "${portfolio.name}",
-  role: "Full-Stack Developer",
-  skills: [
-    "React",
-    "Java",
-    "Python",
-    "SQL"
-  ],
-  passion: "building useful things",
-  status: "learning & growing"
+              <pre><code>{`const dev = {
+  stack: ["React","PHP","SQL"],
+  learning: "AI Engineering",
+  status: "open to work"
 };`}</code></pre>
-              <div className="code-footer"><span>●</span> open to new ideas</div>
+              <div className="code-footer"><span>●</span> build passing</div>
             </div>
             <div className="floating-chip chip-one"><Code2 size={16}/> Clean Code</div>
             <div className="floating-chip chip-two"><Database size={16}/> SQL</div>
@@ -96,10 +95,10 @@ function App() {
         </section>
 
         <section id="about" className="section">
-          <SectionHeading eyebrow="01 — About" title="A little about me" />
+          <SectionHeading eyebrow="~/about" title="A little about me" />
           <div className="about-grid reveal">
             <div className="profile-card">
-              <div className="avatar">{portfolio.initials}</div>
+              <div className="avatar"><img src="/photo.jpg" alt="" /></div>
               <div>
                 <strong>{portfolio.name}</strong>
                 <span>{portfolio.title}</span>
@@ -117,7 +116,7 @@ function App() {
         </section>
 
         <section id="skills" className="section">
-          <SectionHeading eyebrow="02 — Skills" title="Tools I work with" />
+          <SectionHeading eyebrow="~/skills" title="Tools I work with" />
           <div className="skills-grid reveal">
             {Object.entries(portfolio.skills).map(([category, skills]) => (
               <div className="skill-card" key={category}>
@@ -130,7 +129,7 @@ function App() {
         </section>
 
         <section id="projects" className="section">
-          <SectionHeading eyebrow="03 — Projects" title="Things I've built" />
+          <SectionHeading eyebrow="~/projects" title="Things I've built" />
           <div className="projects-grid reveal">
             {portfolio.projects.map((p, i) => (
               <article className="project-card" key={p.name}>
@@ -147,7 +146,7 @@ function App() {
         </section>
 
         <section id="education" className="section">
-          <SectionHeading eyebrow="04 — Education" title="My learning journey" />
+          <SectionHeading eyebrow="~/education" title="My learning journey" />
           <div className="timeline reveal">
             {portfolio.education.map((e) => (
               <div className="timeline-item" key={e.degree}>
@@ -159,7 +158,7 @@ function App() {
         </section>
 
         <section id="experience" className="section">
-          <SectionHeading eyebrow="05 — Experience" title="What I've worked on" />
+          <SectionHeading eyebrow="~/experience" title="What I've worked on" />
           <div className="timeline reveal">
             {portfolio.experience.map((e) => (
               <div className="timeline-item" key={e.role}>
@@ -178,7 +177,7 @@ function App() {
         </section>
 
         <section id="contact" className="section contact-section">
-          <SectionHeading eyebrow="06 — Contact" title="Let's build something" />
+          <SectionHeading eyebrow="~/contact" title="Let's build something" />
           <div className="contact-grid reveal">
             <div>
               <p className="contact-lead">Have a project idea, internship opportunity, or just want to connect? Send me a message.</p>
